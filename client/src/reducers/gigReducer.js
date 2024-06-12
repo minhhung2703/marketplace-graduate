@@ -2,7 +2,7 @@ export const initialState = {
     userID: '',
     title: '',
     category: '',
-    // cover: '',
+    cover: '',
     images: [],
     description: '',
     shortTitle: '',

@@ -32,10 +32,10 @@ const gigSchema = new mongoose.Schema({
         type: Number,
         required: true,
     },
-    // cover: {
-    //     type: String,
-    //     required: true,
-    // },
+    cover: {
+        type: String,
+        required: true,
+    },
     images: {
         type: [String],
         required: false,

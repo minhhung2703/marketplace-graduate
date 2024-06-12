@@ -4,13 +4,13 @@ import { useNavigate } from "react-router-dom";
 import { axiosFetch } from "../../utils";
 import { useRecoilValue } from "recoil";
 import { userState } from "../../atoms";
-import { Loader } from '../../components';
+import { Loader } from "../../components";
 import "./Orders.scss";
 
 const Orders = () => {
   const navigate = useNavigate();
   const user = useRecoilValue(userState);
-
+  console.log(user);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -28,13 +28,21 @@ const Orders = () => {
         }),
   });
 
+  // console.log(order.sellerID._id);
+
   const handleContact = async (order) => {
     const sellerID = order.sellerID.hasOwnProperty("_id")
       ? order.sellerID._id
       : order.sellerID;
+
     const buyerID = order.buyerID.hasOwnProperty("_id")
       ? order.buyerID._id
       : order.buyerID;
+
+    // const sellerID = order.sellerID._id;
+    // const buyerID = order.buyer._id;
+
+    // console.log(buyerID);
 
     axiosFetch
       .get(`/conversations/single/${sellerID}/${buyerID}`)
@@ -55,7 +63,10 @@ const Orders = () => {
   return (
     <div className="orders">
       {isLoading ? (
-        <div className="loader"> <Loader /> </div>
+        <div className="loader">
+          {" "}
+          <Loader />{" "}
+        </div>
       ) : error ? (
         "Something went wrong!"
       ) : (

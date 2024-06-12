@@ -15,7 +15,7 @@ const createConversation = async (request, response) => {
         await conversation.save();
         return response.status(201).send(conversation);
     }
-    catch ({message, status = 500}) {
+    catch ({ message, status = 500 }) {
         return response.status(500).send({
             error: true,
             message
@@ -40,6 +40,7 @@ const getSingleConversation = async (request, response) => {
     const { sellerID, buyerID } = request.params;
     try {
         const conversation = await Conversation.findOne({ sellerID, buyerID });
+
         if (!conversation) {
             throw CustomException('No such conversation found!', 404);
         }

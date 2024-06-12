@@ -75,17 +75,26 @@ const Gig = () => {
                 src={data?.userID?.image || "/media/noavatar.png"}
                 alt=""
               />
-              <span>{data?.userID.username}</span>
-              {!isNaN(data.totalStars / data.starNumber) && (
-                <div className="stars">
-                  {new Array(Math.round(data.totalStars / data.starNumber))
-                    .fill()
-                    .map((item, i) => (
-                      <img src="/media/star.png" key={i} />
-                    ))}
-                  <span>{(data.totalStars / data.starNumber).toFixed(1)}</span>
-                </div>
-              )}
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+              >
+                <span>{data?.userID.username}</span>
+                {!isNaN(data.totalStars / data.starNumber) && (
+                  <div className="stars">
+                    {new Array(Math.round(data.totalStars / data.starNumber))
+                      .fill()
+                      .map((item, i) => (
+                        <img src="/media/star.png" key={i} />
+                      ))}
+                    <span>
+                      {(data.totalStars / data.starNumber).toFixed(1)}
+                    </span>
+                  </div>
+                )}
+              </div>
             </div>
 
             <CarouselProvider

@@ -19,6 +19,8 @@ const Add = () => {
   const navigate = useNavigate();
   const queryClient = useQueryClient();
 
+  console.log(state);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -70,9 +72,7 @@ const Add = () => {
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
-    console.log(user._id);
     const form = { ...state, userID: user._id };
-    console.log(form);
 
     for (let key in form) {
       if (form[key] === "") {
@@ -81,8 +81,9 @@ const Add = () => {
       }
     }
     toast.success("Congratulations! You're on the market!");
-    mutation.mutate(form);
     console.log(form);
+
+    mutation.mutate(form);
     console.log(mutation.form);
 
     setTimeout(() => {
