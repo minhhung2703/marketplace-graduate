@@ -35,7 +35,6 @@
         display: flex;
         align-items: center;
         gap: 10px;
-
         .pp {
           width: 32px;
           height: 32px;
@@ -209,6 +208,7 @@
 
       .details {
         display: flex;
+        margin: 10px 0px;
         align-items: center;
         justify-content: space-between;
         font-size: 14px;
@@ -225,16 +225,18 @@
       }
 
       .features {
+        margin:10px 0;
         .item {
           display: flex;
           align-items: center;
-          gap: 10px;
+          gap: 12px;
           font-weight: 300;
           color: gray;
           margin-bottom: 5px;
 
           img {
-            width: 14px;
+            width: 19px;
+            // font-size:1px
           }
         }
       }
@@ -262,7 +264,7 @@
         width: 100%;
       }
 
-      @media screen and (min-width: 901px) and (max-width: 1400px) {
+      @media screen and (min-width: 901px) and (max-width: 1800px) {
         display: none;
       }
 

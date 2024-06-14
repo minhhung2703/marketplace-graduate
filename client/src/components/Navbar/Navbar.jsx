@@ -1,5 +1,5 @@
 import Slider from "react-slick";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { GrFormNext, GrFormPrevious } from "react-icons/gr";
 import { axiosFetch } from "../../utils";
@@ -18,6 +18,19 @@ const Navbar = () => {
   const navigate = useNavigate();
   const [user, setUser] = useRecoilState(userState);
   const [isLoading, setIsLoading] = useState(false);
+
+  const closeDropDown = useRef();
+  useEffect(() => {
+    const handler = (e) => {
+      if (!closeDropDown.current.contains(e.target)) {
+        setShowPanel(false);
+      }
+    };
+    document.addEventListener("mousedown", handler);
+    return () => {
+      document.removeEventListener("mousedown", handler);
+    };
+  }, []);
 
   useEffect(() => {
     (async () => {
@@ -102,7 +115,7 @@ const Navbar = () => {
           <Link to="/" className="link">
             <span className="text">Marketplace</span>
           </Link>
-          <span className="dot">.</span>
+          {/* <span className="dot">.</span> */}
         </div>
 
         <div className="links">
@@ -133,7 +146,11 @@ const Navbar = () => {
                 </button>
               )}
               {user && (
-                <div className="user" onClick={() => setShowPanel(!showPanel)}>
+                <div
+                  className="user"
+                  ref={closeDropDown}
+                  onClick={() => setShowPanel(!showPanel)}
+                >
                   <img src={user.image || "/media/noavatar.png"} />
                   <span>{user?.username}</span>
                   {showPanel && (

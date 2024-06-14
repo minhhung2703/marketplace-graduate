@@ -98,8 +98,8 @@ const Gig = () => {
             </div>
 
             <CarouselProvider
-              naturalSlideHeight={100}
-              naturalSlideWidth={125}
+              naturalSlideHeight={40}
+              naturalSlideWidth={80}
               totalSlides={data?.images.length}
               infinite
               className="slider"
@@ -121,42 +121,49 @@ const Gig = () => {
               </ButtonNext>
             </CarouselProvider>
 
-            {/* <div className="right-mobile">
-                  <div className="price">
-                    <h3>{data?.shortTitle}</h3>
-                    <h2>{data?.price.toLocaleString('en-IN', {
-                      maximumFractionDigits: 0,
-                      style: 'currency',
-                      currency: 'INR',
-                    })}</h2>
+            <div className="right-mobile">
+              <div className="price">
+                <h3>{data?.shortTitle}</h3>
+                <h2>
+                  {data?.price.toLocaleString("en-IN", {
+                    maximumFractionDigits: 0,
+                    style: "currency",
+                    currency: "USD",
+                  })}
+                </h2>
+              </div>
+              <p>{data?.shortDesc}</p>
+              <div className="details">
+                <div className="item">
+                  <img
+                    src="https://img.icons8.com/?size=100&id=82767&format=png&color=000000"
+                    alt=""
+                  />
+                  <span>{data.deliveryTime} days Delivery</span>
+                </div>
+                <div className="item">
+                  <img
+                    src="https://img.icons8.com/?size=100&id=mMjGo4bmA7Kr&format=png&color=000000"
+                    alt=""
+                  />
+                  <span>{data.revisionNumber} Revisions</span>
+                </div>
+              </div>
+              <div className="features">
+                {data?.features.map((feature) => (
+                  <div key={feature} className="item">
+                    <img
+                      src="https://img.icons8.com/?size=100&id=VFaz7MkjAiu0&format=png&color=000000"
+                      alt=""
+                    />
+                    <span>{feature}</span>
                   </div>
-                  <p>
-                    {data?.shortDesc}
-                  </p>
-                  <div className="details">
-                    <div className="item">
-                      <img src="/img/clock.png" alt="" />
-                      <span>{data.deliveryTime} days Delivery</span>
-                    </div>
-                    <div className="item">
-                      <img src="/img/recycle.png" alt="" />
-                      <span>{data.revisionNumber} Revisions</span>
-                    </div>
-                  </div>
-                  <div className="features">
-                    {
-                      data?.features.map((feature) => (
-                        <div key={feature} className="item">
-                          <img src="/img/greencheck.png" alt="" />
-                          <span>{feature}</span>
-                        </div>
-                      ))
-                    }
-                  </div>
-                  <Link to={`/pay/${_id}`}>
-                    <button>Continue</button>
-                  </Link>
-                </div> */}
+                ))}
+              </div>
+              <Link to={`/pay/${_id}`}>
+                <button>Continue</button>
+              </Link>
+            </div>
             <h2>About This Gig</h2>
             <p>{data.description}</p>
             <div className="seller">
@@ -224,25 +231,34 @@ const Gig = () => {
                 {data?.price.toLocaleString("en-IN", {
                   maximumFractionDigits: 0,
                   style: "currency",
-                  currency: "INR",
+                  currency: "USD",
                 })}
               </h2>
             </div>
             <p>{data?.shortDesc}</p>
             <div className="details">
               <div className="item">
-                <img src="/img/clock.png" alt="" />
+                <img
+                  src="https://img.icons8.com/?size=100&id=82767&format=png&color=000000"
+                  alt=""
+                />
                 <span>{data.deliveryTime} days Delivery</span>
               </div>
               <div className="item">
-                <img src="/img/recycle.png" alt="" />
+                <img
+                  src="https://img.icons8.com/?size=100&id=mMjGo4bmA7Kr&format=png&color=000000"
+                  alt=""
+                />
                 <span>{data.revisionNumber} Revisions</span>
               </div>
             </div>
             <div className="features">
               {data?.features.map((feature) => (
                 <div key={feature} className="item">
-                  <img src="/img/greencheck.png" alt="" />
+                  <img
+                    src="https://img.icons8.com/?size=100&id=VFaz7MkjAiu0&format=png&color=000000"
+                    alt=""
+                  />
                   <span>{feature}</span>
                 </div>
               ))}
