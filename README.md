@@ -190,8 +190,8 @@ e.g Cloudinary preset name from your cloudinary dashboard settings -> Uploads. L
 
 ### Let's connect 🤝 <br />
 
-[![linkedin](https://img.shields.io/badge/Zuhed_Shaikh-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/minh-h%C6%B0ng-nguy%E1%BB%85n-6041a8243/)
-[![GitHub](https://img.shields.io/badge/Zuhed_Shaikh-20232A?style=for-the-badge&logo=Github&logoColor=white)](https://github.com/minhhung2703)
+[![linkedin]](https://www.linkedin.com/in/minh-h%C6%B0ng-nguy%E1%BB%85n-6041a8243/)
+[![GitHub]](https://github.com/minhhung2703)
 
 © 2024 Hung Nguyen Minh
 
