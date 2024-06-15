@@ -67,7 +67,6 @@ const Gig = () => {
       ) : (
         <div className="container">
           <div className="left">
-            <span className="breadcrumbs">Liverr Graphics & Design</span>
             <h1>{data?.title}</h1>
             <div className="user">
               <img
@@ -174,7 +173,9 @@ const Gig = () => {
                   alt=""
                 />
                 <div className="info">
-                  <span>{data?.userID.username}</span>
+                  <span style={{ fontSize: "16px" }}>
+                    {data?.userID.username}
+                  </span>
                   <div className="stars">
                     <img src="/media/star.png" alt="" />
                     <img src="/media/star.png" alt="" />

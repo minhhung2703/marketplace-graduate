@@ -5,7 +5,11 @@ const GigCard = (props) => {
   const { data } = props;
 
   return (
-    <Link to={`/gig/${data._id}`} className="link">
+    <Link
+      to={`/gig/${data._id}`}
+      style={{ marginBottom: " 40px", marginTop: "40px" }}
+      className="link"
+    >
       <div className="gigCard">
         <img src={data.cover} alt="" />
         <div className="info">
@@ -29,7 +33,7 @@ const GigCard = (props) => {
               {data.price.toLocaleString("en-IN", {
                 maximumFractionDigits: 0,
                 style: "currency",
-                currency: "INR",
+                currency: "USD",
               })}
             </h2>
           </div>

@@ -100,7 +100,7 @@ const Orders = () => {
                     {order.price.toLocaleString("en-IN", {
                       maximumFractionDigits: 0,
                       style: "currency",
-                      currency: "INR",
+                      currency: "USD",
                     })}
                   </td>
                   <td>

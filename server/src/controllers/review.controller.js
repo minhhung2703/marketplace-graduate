@@ -1,11 +1,11 @@
 const { Review, Gig } = require('../models');
 const { CustomException } = require('../utils');
 
-const createReview = async(request, response) => {
+const createReview = async (request, response) => {
     const { gigID, star, description } = request.body;
 
     try {
-        if(request.isSeller) {
+        if (request.isSeller) {
             throw CustomException("Sellers can't create reviews!", 403);
         }
         const review = new Review({
@@ -22,7 +22,7 @@ const createReview = async(request, response) => {
             review
         })
     }
-    catch({message, status = 500}) {
+    catch ({ message, status = 500 }) {
         return response.status(status).send({
             error: false,
             message
@@ -30,14 +30,27 @@ const createReview = async(request, response) => {
     }
 }
 
+const getAllReviews = async (request, response) => {
+    try {
+        const getAllReview = await Review.find();
+        return response.status(200).json(getAllReview)
+    } catch ({ message, status = 500 }) {
+        return response.status(500).send({
+            error: false,
+            message
+        });
+    }
+
+}
+
 const getReview = async (request, response) => {
     const { gigID } = request.params;
-    
+
     try {
         const reviews = await Review.find({ gigID }).populate('userID', 'username image email country');
         return response.status(201).send(reviews);
     }
-    catch({message, status = 500}) {
+    catch ({ message, status = 500 }) {
         return response.status(status).send({
             error: false,
             message
@@ -51,6 +64,7 @@ const deleteReview = async (request, response) => {
 
 module.exports = {
     createReview,
+    getAllReviews,
     getReview,
     deleteReview
 }

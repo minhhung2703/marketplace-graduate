@@ -138,7 +138,9 @@ const Navbar = () => {
               )}
               {!user && (
                 <button
-                  className={showMenu || pathname !== "/" ? "join-active" : ""}
+                  className={
+                    showMenu || pathname !== "/" ? "join-active" : "join-active"
+                  }
                 >
                   <Link to="/register" className="link">
                     Join

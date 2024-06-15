@@ -4,7 +4,7 @@ const stripe = require('stripe')(process.env.STRIPE_SECRET);
 
 const getOrders = async (request, response) => {
     try {
-        const orders = await Order.find({ $and: [{ $or: [{ sellerID: request.userID }, { buyerID: request.userID }] }, { isCompleted: true }] }).populate(request.isSeller? 'buyerID' : 'sellerID', 'username email image country');
+        const orders = await Order.find({ $and: [{ $or: [{ sellerID: request.userID }, { buyerID: request.userID }] }, { isCompleted: true }] }).populate(request.isSeller ? 'buyerID' : 'sellerID', 'username email image country');
         return response.send(orders);
     }
     catch ({ message, status = 500 }) {
@@ -46,7 +46,7 @@ const paymentIntent = async (request, response) => {
         })
 
     }
-    catch({message, status = 500}) {
+    catch ({ message, status = 500 }) {
         return response.send({
             error: true,
             message
@@ -64,7 +64,7 @@ const updatePaymentStatus = async (request, response) => {
             }
         }, { new: true });
 
-        if(order?.isCompleted) {
+        if (order?.isCompleted) {
             return response.status(202).send({
                 error: false,
                 message: 'Order has been confirmed!'
@@ -73,7 +73,7 @@ const updatePaymentStatus = async (request, response) => {
 
         throw CustomException('Payment status not updated!', 500);
     }
-    catch({message, status = 500}) {
+    catch ({ message, status = 500 }) {
         return response.status(status).send({
             error: true,
             message

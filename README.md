@@ -1,6 +1,4 @@
-<h1 align="center">Fiverr Clone</h1>
-
-<h3 align="center">A setout to clone one of the largest outsourcing platforms using the toolset from the MERN stack.</h3>
+<h1 align="center">MarketPlace</h1>
 
 <br />
 
@@ -28,20 +26,10 @@
 <h4 align="center">Deployed On:</h4>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="vercel" />
   <img src="https://img.shields.io/badge/Render-430098?style=for-the-badge&logo=heroku&logoColor=white" alt="heroku" />
 </p>
 
 <br />
-<p align="center">
-  <em>
-    <b>Pardon render.com's slow service to the server for initial api response</b>
-  </em>
-</p>
-<br />
-
-![cover](https://i.ibb.co/16SWfbg/Fiverr-Gif.gif)
-
 <br />
 <br />
 
@@ -68,7 +56,7 @@ As for the front end, the UI has only been built using JSX and Scss. For state m
 ## 🚀 Seller Features
 
 - Chat with buyers
-- Create new gigs and
+- Create new gigs and List gigs
 - Only the seller's gig can be deleted
 - Gigs can be reviewed by buyers based on comment and stars
 
@@ -82,39 +70,6 @@ As for the front end, the UI has only been built using JSX and Scss. For state m
 - Search gigs with keywords
 
 <br />
-
-## Glimpses of fiverr-clone 😉 :
-
-<table>
-  <tr>
-    <td><img src="https://i.ibb.co/4Z9CMpn/1.png"  alt="home" /></td>
-    <td><img src="https://i.ibb.co/QQQgWTc/2.png"  alt="slider" /></td>
-  </tr>
-  <tr>
-    <td><img src="https://i.ibb.co/YNyrDZb/3.png"  alt="men" /></td>
-   <td><img src="https://i.ibb.co/BGw32m3/4.png"  alt="allProducts" /></td>
-  </tr>
-  <tr>
-    <td><img src="https://i.ibb.co/PjXSMsk/5.png" alt="allProducts" /></td>
-    <td><img src="https://i.ibb.co/M2xgqN1/13.png"  alt="men" /></td>
-  </tr>
-  <tr>
-    <td><img src="https://i.ibb.co/sKdj3BM/7.png" alt="allProducts" /></td>
-    <td><img src="https://i.ibb.co/99VZBNq/11.png"  alt="men" /></td>
-  </tr>
-  <tr>
-    <td><img src="https://i.ibb.co/rc2rzw1/10.png" alt="allProducts" /></td>
-    <td><img src="https://i.ibb.co/59WnSW8/9.png"  alt="men" /></td>
-  </tr>
-  <tr>
-    <td><img src="https://i.ibb.co/GkRtV3T/8.png" alt="allProducts" /></td>
-    <td><img src="https://i.ibb.co/TkxZjcW/12.png" alt="allProducts" /></td>
-    <td></td>
-  </tr>
-</table>
-
-<br />
-
 <br />
 
 ## Getting Started
@@ -129,18 +84,14 @@ This project was built using React, Redux, Sass, HTML, JavaScript, Rest API, Nod
 
 ### Setup
 
-The project repository can be found in [GitHub link](https://github.com/zuhedshaikh95/fiverr-clone) or just clone the project using this command.
+The project repository can be found in [GitHub link](https://github.com/minhhung2703/marketplace-graduate)
 
 ```
 Using HTTPS
 
-# git clone https://github.com/zuhedshaikh95/fiverr-clone.git
+# https://github.com/minhhung2703/marketplace-graduate.git
 ```
 
-- Open terminal on your workspace with
-
-```
-cd /home/workspace/fiverr-clone
 ```
 
 ## Install
@@ -152,24 +103,31 @@ Check that you have node and npm installed
 To check if you have Node.js installed, run this command in your terminal:
 
 ```
+
 node -v
+
 ```
 
 To confirm that you have npm installed you can run this command in your terminal:
 
 ```
+
 npm -v
+
 ```
 
 To confirm that you have MongoDB installed you can run this command in your terminal:
 
 ```
+
 mongo -v
+
 ```
 
 To install all the dependences of the project, run the following command:
 
 ```
+
 cd client
 
 npm install
@@ -179,12 +137,15 @@ cd ../
 cd server
 
 npm install
+
 ```
 
 To run the application got to the client folder and run the following command:
 
 ```
+
 npm run dev
+
 ```
 
 ### Environment Variables
@@ -193,31 +154,28 @@ To run this project, you will need to add the following environment variables to
 
 ### Server
 
-`JWT_SECRET`
-e.g. this_is_secret_123
+`JWT_SECRET=`
+e.g. this_is_secret_123 or anything
 
-`MONGODB_URI`
+`MONGODB_URI=`
 e.g. mongodb cluster URI
 
-`STRIPE_SECRET`
+`STRIPE_SECRET=`
 e.g. Secret key from stripe dashboard
 
-`NODE_ENV`
+`NODE_ENV=`
 e.g. 'development' for local and 'production' for production
 
 ### Client
 
-`VITE_API_URL`
+`VITE_API_URL=`
 e.g. http://localhost:3000/api or production deployed server link
 
-`VITE_STRIPE_PUBLISHABLE_KEY`
+`VITE_STRIPE_PUBLISHABLE_KEY=`
 e.g. Publishable key from stripe dashboard
 
-`CLOUDINARY_ENV`
-e.g Cloudinary environment string from your cloudinary dashboard
-
-`CLOUDINARY_PRESET`
-e.g. Cloudinary preset name from your cloudinary dashboard settings -> Uploads
+`CLOUDINARY_PRESET=`
+e.g Cloudinary preset name from your cloudinary dashboard settings -> Uploads. Let's changing `ml-default` at generateImageURL by your cloudinary preset name
 
 ### Tools used on this project
 
@@ -232,11 +190,12 @@ e.g. Cloudinary preset name from your cloudinary dashboard settings -> Uploads
 
 ### Let's connect 🤝 <br />
 
-[![linkedin](https://img.shields.io/badge/Zuhed_Shaikh-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/zuhedshaikh95/)
-[![GitHub](https://img.shields.io/badge/Zuhed_Shaikh-20232A?style=for-the-badge&logo=Github&logoColor=white)](https://github.com/zuhedshaikh95)
+[![linkedin](https://img.shields.io/badge/Zuhed_Shaikh-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/minh-h%C6%B0ng-nguy%E1%BB%85n-6041a8243/)
+[![GitHub](https://img.shields.io/badge/Zuhed_Shaikh-20232A?style=for-the-badge&logo=Github&logoColor=white)](https://github.com/minhhung2703)
 
-© 2023 Zuhed Shaikh
+© 2024 Hung Nguyen Minh
 
 ## Show your support
 
 Give a ⭐️ if you like this project!
+```
