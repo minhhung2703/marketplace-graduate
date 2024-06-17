@@ -4,6 +4,8 @@
 *.ap_
 *.aab
 
+vercel.json
+
 # Files for the ART/Dalvik VM
 *.dex
 
