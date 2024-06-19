@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Featured, Slide, TrustedBy } from "../../components";
+import { Featured, Slide } from "../../components";
 import { CategoryCard, ProjectCard } from "../../components";
 import { cards, projects } from "../../data";
 
@@ -12,7 +12,6 @@ const Home = () => {
   return (
     <div className="home">
       <Featured />
-      <TrustedBy />
       <Slide slidesToShow={5}>
         {cards.map((card) => (
           <CategoryCard key={card.id} data={card} />
@@ -118,10 +117,7 @@ const Home = () => {
             <button>Explore Business</button>
           </div>
           <div className="item">
-            <img
-              src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_870,dpr_1.0/v1/attachments/generic_asset/asset/d9c17ceebda44764b591a8074a898e63-1599597624757/business-desktop-870-x1.png"
-              alt=""
-            />
+            <img src="./media/banner2.png" alt="" />
           </div>
         </div>
       </div>

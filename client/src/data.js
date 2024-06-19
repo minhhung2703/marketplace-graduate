@@ -24,7 +24,7 @@ export const cards = [
     id: 4,
     title: "Voice Over",
     desc: "Share your message",
-    img: "https://fiverr-res.cloudinary.com/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/112637223/original/3fcaee63f0e1f612ca137e8d456aade8f659fe2b.jpg",
+    img: "https://www.stagemilk.com/wp-content/uploads/2021/08/voice-over-equipment.jpg",
     slug: 'voice'
   },
   {
@@ -45,14 +45,14 @@ export const cards = [
     id: 7,
     title: "SEO",
     desc: "Unlock growth online",
-    img: "https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741668/seo-2x.png",
+    img: "https://cdn.vntrip.vn/cam-nang/wp-content/uploads/2021/05/nhung-cong-viec-work-from-home-1.png",
     slug: 'seo'
   },
   {
     id: 8,
     title: "Illustration",
     desc: "Color you dreams",
-    img: "https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741664/illustration-2x.png",
+    img: "https://mir-s3-cdn-cf.behance.net/projects/404/89631d196441173.Y3JvcCw4MDgsNjMyLDAsMA.png",
     slug: 'illustration'
   },
   {
