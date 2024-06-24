@@ -22,10 +22,7 @@ const Home = () => {
           <div className="item">
             <h1>A whole world of freelance talent at your fingertips</h1>
             <div className="title">
-              <img
-                src="https://w7.pngwing.com/pngs/840/966/png-transparent-computer-icons-check-mark-checkbox-warranty-purple-logo-magenta-thumbnail.png"
-                alt="check"
-              />
+              <img src="./media/tick2.png" alt="check" />
               <h6>The best for every budget</h6>
             </div>
             <p>
@@ -33,10 +30,7 @@ const Home = () => {
               just project-based pricing.
             </p>
             <div className="title">
-              <img
-                src="https://img.icons8.com/?size=100&id=pIPl8tqh3igN&format=png&color=000000"
-                alt="check"
-              />
+              <img src="./media/tick2.png" alt="check" />
               <h6>Quality work done quickly</h6>
             </div>
             <p>
@@ -44,10 +38,7 @@ const Home = () => {
               minutes.
             </p>
             <div className="title">
-              <img
-                src="https://img.icons8.com/?size=100&id=pIPl8tqh3igN&format=png&color=000000"
-                alt="check"
-              />
+              <img src="./media/tick2.png" alt="check" />
               <h6>Protected payments, every time</h6>
             </div>
             <p>
@@ -55,10 +46,7 @@ const Home = () => {
               until you approve the work.
             </p>
             <div className="title">
-              <img
-                src="https://img.icons8.com/?size=100&id=pIPl8tqh3igN&format=png&color=000000"
-                alt="check"
-              />
+              <img src="./media/tick2.png" alt="check" />
               <h6>24/7 support</h6>
             </div>
             <p>
@@ -88,27 +76,18 @@ const Home = () => {
               dedicated to businesses
             </p>
             <div className="title">
-              <img
-                src="https://img.icons8.com/?size=100&id=pIPl8tqh3igN&format=png&color=000000"
-                alt="check"
-              />
+              <img src="./media/tick2.png" alt="check" />
               <h6>Connect to freelancers with proven business experience</h6>
             </div>
             <div className="title">
-              <img
-                src="https://img.icons8.com/?size=100&id=pIPl8tqh3igN&format=png&color=000000"
-                alt="check"
-              />
+              <img src="./media/tick2.png" alt="check" />
               <h6>
                 Get matched with the perfect talent by a customer success
                 manager
               </h6>
             </div>
             <div className="title">
-              <img
-                src="https://img.icons8.com/?size=100&id=pIPl8tqh3igN&format=png&color=000000"
-                alt="check"
-              />
+              <img src="./media/tick2.png" alt="check" />
               <h6>
                 Manage teamwork and boost productivity with one powerful
                 workspace
