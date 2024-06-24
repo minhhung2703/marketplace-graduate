@@ -152,7 +152,7 @@ const Gig = () => {
                 {data?.features.map((feature) => (
                   <div key={feature} className="item">
                     <img
-                      src="https://img.icons8.com/?size=100&id=VFaz7MkjAiu0&format=png&color=000000"
+                      src="https://www.freeiconspng.com/uploads/pink-tick-icon-37.png"
                       alt=""
                     />
                     <span>{feature}</span>
@@ -257,7 +257,7 @@ const Gig = () => {
               {data?.features.map((feature) => (
                 <div key={feature} className="item">
                   <img
-                    src="https://img.icons8.com/?size=100&id=VFaz7MkjAiu0&format=png&color=000000"
+                    src="https://www.freeiconspng.com/uploads/pink-tick-icon-37.png"
                     alt=""
                   />
                   <span>{feature}</span>

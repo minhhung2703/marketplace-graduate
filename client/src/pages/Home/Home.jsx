@@ -23,7 +23,7 @@ const Home = () => {
             <h1>A whole world of freelance talent at your fingertips</h1>
             <div className="title">
               <img
-                src="https://img.icons8.com/?size=100&id=pIPl8tqh3igN&format=png&color=000000"
+                src="https://w7.pngwing.com/pngs/840/966/png-transparent-computer-icons-check-mark-checkbox-warranty-purple-logo-magenta-thumbnail.png"
                 alt="check"
               />
               <h6>The best for every budget</h6>

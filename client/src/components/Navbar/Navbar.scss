@@ -106,14 +106,14 @@
             }
 
             .join-active {
-                color: #1DBF73;
+                color: rgb(255, 69, 132);
                 font-weight: 600;
                 font-size: 14px;
-                border: 1px solid #1DBF73;
+                border: 1px solid rgb(255, 69, 132);
 
                 &:hover {
-                    background-color: #1DBF73;
-                    border-color: #1DBF73;
+                    background-color: rgb(255, 69, 132);
+                    border-color: transparent;
                     color: #fff;
                 }
             }

@@ -94,7 +94,7 @@ const Register = () => {
           <p>
             Already have an account? <Link to="/login">Signin</Link>
           </p>
-          <h1>I want to become a seller</h1>
+          <h1>Become a seller</h1>
           <div className="toggle">
             <label htmlFor="">Activate the seller account</label>
             <label className="switch">
