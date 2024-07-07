@@ -19,10 +19,10 @@ const Navbar = () => {
   const [user, setUser] = useRecoilState(userState);
   const [isLoading, setIsLoading] = useState(false);
 
-  const closeDropDown = useRef();
+  const closeDropDown = useRef(null);
   useEffect(() => {
     const handler = (e) => {
-      if (!closeDropDown.current.contains(e.target)) {
+      if (closeDropDown.current && !closeDropDown.current.contains(e.target)) {
         setShowPanel(false);
       }
     };
@@ -40,7 +40,7 @@ const Navbar = () => {
         setUser(data.user);
       } catch ({ response }) {
         localStorage.removeItem("user");
-        console.log(response.data.message);
+        // console.log(response.data.message);
       } finally {
         setIsLoading(false);
       }

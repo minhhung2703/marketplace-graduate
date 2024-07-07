@@ -3,12 +3,13 @@ import axios from "axios";
 const generateImageURL = async (image) => {
   const file = new FormData();
   file.append("file", image);
-  file.append("upload_preset", "ml_default"); // ml_default is the CLOUDINARY_PRESET
+  file.append("upload_preset", "graduate"); // ml_default is the CLOUDINARY_PRESET
 
   const { data } = await axios.post(
-    `https://api.cloudinary.com/v1_1/dkrzz3lpw/image/upload`,
+    `https://api.cloudinary.com/v1_1/dt6k5lgow/upload`,
     file
   );
+  console.log(data)
   return data;
 };
 

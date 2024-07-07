@@ -1,7 +1,7 @@
 import toast from "react-hot-toast";
 import { useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
-import { axiosFetch, getCountryFlag } from "../../utils";
+import { axiosFetch } from "../../utils";
 import { Link, useParams } from "react-router-dom";
 import { Loader, NextArrow, PrevArrow, Reviews } from "../../components";
 import "./Gig.scss";
@@ -49,7 +49,7 @@ const Gig = () => {
         }),
   });
 
-  const country = getCountryFlag(data?.userID.country);
+  const country = data?.userID.country;
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -120,7 +120,7 @@ const Gig = () => {
               </ButtonNext>
             </CarouselProvider>
 
-            <div className="right-mobile">
+            {/* <div className="right-mobile">
               <div className="price">
                 <h3>{data?.shortTitle}</h3>
                 <h2>
@@ -162,7 +162,7 @@ const Gig = () => {
               <Link to={`/pay/${_id}`}>
                 <button>Continue</button>
               </Link>
-            </div>
+            </div> */}
             <h2>About This Gig</h2>
             <p>{data.description}</p>
             <div className="seller">
@@ -194,7 +194,7 @@ const Gig = () => {
                     <span className="desc">
                       {data?.userID.country}
                       <span className="flag">
-                        <img src={country.normal} alt="" />
+                        <img src={country} alt="" />
                       </span>
                     </span>
                   </div>

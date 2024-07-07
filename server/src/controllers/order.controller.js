@@ -19,6 +19,9 @@ const paymentIntent = async (request, response) => {
     const { _id } = request.params;
 
     try {
+        if (request.isSeller === true) {
+            throw CustomException("Seller can't order gig", 403)
+        }
         const gig = await Gig.findOne({ _id });
 
         const payment_intent = await stripe.paymentIntents.create({

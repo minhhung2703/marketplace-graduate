@@ -69,6 +69,7 @@ const Register = () => {
           <input
             name="username"
             type="text"
+            minLength={4}
             placeholder="johndoe"
             onChange={handleChange}
           />
@@ -76,11 +77,17 @@ const Register = () => {
           <input
             name="email"
             type="email"
+            minLength={14}
             placeholder="email"
             onChange={handleChange}
           />
           <label htmlFor="">Password</label>
-          <input name="password" type="password" onChange={handleChange} />
+          <input
+            name="password"
+            type="password"
+            minLength={8}
+            onChange={handleChange}
+          />
           <label htmlFor="">Profile Picture</label>
           <input
             type="file"
@@ -105,6 +112,8 @@ const Register = () => {
           <label htmlFor="">Phone Number</label>
           <input
             name="phone"
+            minLength={10}
+            maxLength={11}
             type="text"
             placeholder="+1 1234 567 890"
             onChange={handleChange}

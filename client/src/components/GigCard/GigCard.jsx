@@ -17,7 +17,9 @@ const GigCard = (props) => {
             <img src={data.userID.image || "./media/noavatar.png"} alt="" />
             <span>{data.userID.username}</span>
           </div>
-          <p>{data.title}</p>
+          <div style={{ height: "40px", overflowY: "hidden" }}>
+            <p>{data.title}</p>
+          </div>
           <div className="star">
             <img src="./media/star.png" alt="" />
             <span>{Math.round(data.totalStars / data.starNumber) || 0}</span>

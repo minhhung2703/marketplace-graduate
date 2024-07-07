@@ -34,41 +34,12 @@ const Reviews = (props) => {
           if (data.message == "jwt expired") {
             navigation("/login");
           }
-
           toast.error(data.message);
         }),
     onSuccess: () => {
       queryClient.invalidateQueries(["reviews"]);
     },
   });
-
-  // const mutation = useMutation({
-  //   mutationFn: async (review) => {
-  //     const existingReviews = await axiosFetch.get("/reviews");
-  //     console.log(existingReviews);
-  //     const userIdReview = existingReviews.data.some(
-  //       (existingReviews) => (existingReviews._id = review.userID)
-  //     );
-  //     if (userIdReview) {
-  //       throw new Error("user ID already exists");
-  //     }
-  //     // If userId does not exist, proceed with the POST request
-  //     const { data } = await axiosFetch.post("/reviews", review);
-  //     return data;
-  //   },
-  //   onError: (error) => {
-  //     if (error.message === "jwt expired") {
-  //       navigation("/login");
-  //     } else if (error.message === "user ID already exists") {
-  //       toast.error("The user ID already exists. Please use a different ID.");
-  //     } else {
-  //       toast.error(error.message);
-  //     }
-  //   },
-  //   onSuccess: () => {
-  //     queryClient.invalidateQueries(["reviews"]);
-  //   },
-  // });
 
   const handleReviewSubmit = (event) => {
     event.preventDefault();
@@ -82,7 +53,7 @@ const Reviews = (props) => {
         gigID,
         description,
         star,
-        // userID
+        userID,
       });
       event.target.reset();
     }
