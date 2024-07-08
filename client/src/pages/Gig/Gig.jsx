@@ -10,7 +10,6 @@ import {
   CarouselProvider,
   Slider,
   Slide,
-  ImageWithZoom,
   ButtonBack,
   ButtonNext,
   Image,
