@@ -18,7 +18,6 @@ const MyGigs = () => {
     queryFn: () =>
       axiosFetch(`/gigs/?userID=${user._id}`)
         .then(({ data }) => {
-          console.table(data);
           return data;
         })
         .catch(({ response }) => {

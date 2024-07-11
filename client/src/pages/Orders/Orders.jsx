@@ -28,8 +28,6 @@ const Orders = () => {
         }),
   });
 
-  // console.log(order.sellerID._id);
-
   const handleContact = async (order) => {
     const sellerID = order.sellerID.hasOwnProperty("_id")
       ? order.sellerID._id
@@ -38,11 +36,6 @@ const Orders = () => {
     const buyerID = order.buyerID.hasOwnProperty("_id")
       ? order.buyerID._id
       : order.buyerID;
-
-    // const sellerID = order.sellerID._id;
-    // const buyerID = order.buyer._id;
-
-    // console.log(buyerID);
 
     axiosFetch
       .get(`/conversations/single/${sellerID}/${buyerID}`)

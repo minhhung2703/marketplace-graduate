@@ -39,7 +39,7 @@ const Add = () => {
     onSuccess: () => queryClient.invalidateQueries(["my-gigs"]),
   });
 
-  const handleFormCange = (event) => {
+  const handleFormChange = (event) => {
     const { name, value } = event.target;
     dispatch({
       type: "CHANGE_INPUT",
@@ -102,11 +102,11 @@ const Add = () => {
               name="title"
               type="text"
               placeholder="e.g. I will do something I'm really good at"
-              onChange={handleFormCange}
+              onChange={handleFormChange}
             />
 
             <label htmlFor="">Category</label>
-            <select name="category" onChange={handleFormCange}>
+            <select name="category" onChange={handleFormChange}>
               <option value="">Category</option>
               {cards.map((item) => (
                 <option key={item.id} value={item.slug}>
@@ -143,7 +143,7 @@ const Add = () => {
               cols="30"
               rows="16"
               placeholder="Brief descriptions to introduce your service to customers"
-              onChange={handleFormCange}
+              onChange={handleFormChange}
             ></textarea>
             <button onClick={handleFormSubmit}>Create</button>
           </div>
@@ -154,7 +154,7 @@ const Add = () => {
               type="text"
               name="shortTitle"
               placeholder="e.g. One-page web design"
-              onChange={handleFormCange}
+              onChange={handleFormChange}
             />
 
             <label htmlFor="">Short Description</label>
@@ -163,7 +163,7 @@ const Add = () => {
               cols="30"
               rows="10"
               placeholder="Short description of your service"
-              onChange={handleFormCange}
+              onChange={handleFormChange}
             ></textarea>
 
             <label htmlFor="">Delivery Time (e.g. 3 days)</label>
@@ -171,7 +171,7 @@ const Add = () => {
               type="number"
               name="deliveryTime"
               min="1"
-              onChange={handleFormCange}
+              onChange={handleFormChange}
             />
 
             <label htmlFor="">Revision Number</label>
@@ -179,7 +179,7 @@ const Add = () => {
               type="number"
               name="revisionNumber"
               min="1"
-              onChange={handleFormCange}
+              onChange={handleFormChange}
             />
 
             <label htmlFor="">Add Feature</label>
@@ -187,7 +187,7 @@ const Add = () => {
               <input
                 type="text"
                 placeholder="e.g. page design"
-                onChange={handleFormCange}
+                onChange={handleFormChange}
               />
               <button type="submit">Add</button>
             </form>
@@ -210,7 +210,7 @@ const Add = () => {
               name="price"
               type="number"
               min="1"
-              onChange={handleFormCange}
+              onChange={handleFormChange}
             />
           </div>
         </div>

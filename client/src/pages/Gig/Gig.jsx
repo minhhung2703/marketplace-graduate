@@ -118,50 +118,6 @@ const Gig = () => {
                 <NextArrow />
               </ButtonNext>
             </CarouselProvider>
-
-            {/* <div className="right-mobile">
-              <div className="price">
-                <h3>{data?.shortTitle}</h3>
-                <h2>
-                  {data?.price.toLocaleString("en-IN", {
-                    maximumFractionDigits: 0,
-                    style: "currency",
-                    currency: "USD",
-                  })}
-                </h2>
-              </div>
-              <p>{data?.shortDesc}</p>
-              <div className="details">
-                <div className="item">
-                  <img
-                    src="https://img.icons8.com/?size=100&id=82767&format=png&color=000000"
-                    alt=""
-                  />
-                  <span>{data.deliveryTime} days Delivery</span>
-                </div>
-                <div className="item">
-                  <img
-                    src="https://img.icons8.com/?size=100&id=mMjGo4bmA7Kr&format=png&color=000000"
-                    alt=""
-                  />
-                  <span>{data.revisionNumber} Revisions</span>
-                </div>
-              </div>
-              <div className="features">
-                {data?.features.map((feature) => (
-                  <div key={feature} className="item">
-                    <img
-                      src="https://www.freeiconspng.com/uploads/pink-tick-icon-37.png"
-                      alt=""
-                    />
-                    <span>{feature}</span>
-                  </div>
-                ))}
-              </div>
-              <Link to={`/pay/${_id}`}>
-                <button>Continue</button>
-              </Link>
-            </div> */}
             <h2>About This Gig</h2>
             <p>{data.description}</p>
             <div className="seller">

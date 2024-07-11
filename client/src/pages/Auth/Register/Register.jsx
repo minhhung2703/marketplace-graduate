@@ -46,7 +46,6 @@ const Register = () => {
       navigate("/login");
     } catch (error) {
       toast.error("Account already exist");
-      console.log(error);
       // setLoading(false);
     }
   };

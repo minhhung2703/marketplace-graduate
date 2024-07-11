@@ -40,7 +40,6 @@ const Navbar = () => {
         setUser(data.user);
       } catch ({ response }) {
         localStorage.removeItem("user");
-        // console.log(response.data.message);
       } finally {
         setIsLoading(false);
       }
@@ -115,7 +114,6 @@ const Navbar = () => {
           <Link to="/" className="link">
             <span className="text">Marketplace</span>
           </Link>
-          {/* <span className="dot">.</span> */}
         </div>
 
         <div className="links">

@@ -11,7 +11,6 @@ import "./Message.scss";
 const Message = () => {
   const user = useRecoilValue(userState);
   const { conversationID } = useParams();
-  console.log(conversationID);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -29,7 +28,6 @@ const Message = () => {
           toast.error(response.data.message);
         }),
   });
-  console.log(data);
 
   const queryClient = useQueryClient();
   const mutation = useMutation({

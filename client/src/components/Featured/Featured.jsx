@@ -47,7 +47,7 @@ const Featured = () => {
               objectFit: "cover",
             }}
             src="./media/banner.jpg"
-            alt="hero"
+            alt="banner"
           />
         </div>
       </div>
